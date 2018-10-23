@@ -6,5 +6,4 @@ Just execute npm start (after doing an npm install of course) and the website sh
 Make sure you update the data function in App.js to generate a new layout.
 
 # TO-DO
-- Have data read from an external source (probably JSON file) instead of javascript
 - Get PDF export working
