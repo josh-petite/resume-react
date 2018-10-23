@@ -1,0 +1,43 @@
+.skills {
+    background-color: #ddd;
+    padding: 5px 10px;
+}
+
+.skills .title {
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #888;
+    padding: 5px 0;
+}
+
+.skills .skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills .skill {
+    font-size: 0.8em;
+    height: 24px;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.skills .skill .skill-name {
+    flex: 1 65%;
+    margin-top: 8px;
+}
+
+.skills .skill .rating {
+    margin-top: 7px;
+}
+
+.skills .skill .rating-value {
+    flex: 20%;
+    width: 80px;
+    height: 16px;
+}
+
+.skills .skill .skill-description {
+    font-style: italic;
+    text-align: right;
+}

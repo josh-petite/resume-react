@@ -1,0 +1,38 @@
+.experience {
+    text-align: left;
+    padding: 5px 15px 5px 5px;
+}
+
+.experience .title {
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.experience .block {
+    display: flex;
+    padding: 7px 0;
+}
+
+.experience .block .time {
+    flex: 1 20%;
+    font-weight: bold;
+}
+
+.experience .block .details {
+    flex: 1 80%;
+}
+
+.experience .block .details .job-title {
+    font-weight: bold;
+}
+
+.experience .block .details .company {
+    font-style: italic;
+}
+
+.experience .block .details .items {
+    margin: 10px 0;
+    padding-left: 15px;
+}

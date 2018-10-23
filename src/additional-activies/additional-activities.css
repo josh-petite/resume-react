@@ -1,0 +1,11 @@
+.activities {
+    text-align: left;
+    padding: 5px 15px 5px 5px;
+}
+
+.activities .title {
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}

@@ -1,0 +1,24 @@
+.personal-info {
+    background-color: #ddd;
+    padding: 5px 10px;
+}
+
+.personal-info .title {
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #888;
+    padding: 5px 0;
+}
+
+.personal-info .item {
+    padding: 5px 3px 0;
+}
+
+.personal-info .item-content {
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.personal-info .hidden {
+    display: none;
+}
