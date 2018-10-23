@@ -7,11 +7,11 @@ class ResumeSkills extends Component {
     let rating = [];
 
     for (let i = 0; i < skill.rating; i++) {
-      rating.push(<circle key={i} cx={`${(i * 20) + 10}%`} cy='50%' r='6' fill='black' stroke='black'/>);
+      rating.push(<circle key={i} cx={`${(i * 20) + 10}%`} cy='50%' r='5' fill='black' stroke='black'/>);
     }
 
     for (let i = skill.rating; i < 5; i++) {
-      rating.push(<circle key={i} cx={`${(i * 20) + 10}%`} cy='50%' r='6' fill='grey' stroke='black'/>);
+      rating.push(<circle key={i} cx={`${(i * 20) + 10}%`} cy='50%' r='5' fill='grey' stroke='black'/>);
     }
 
     return rating;
@@ -34,8 +34,18 @@ class ResumeSkills extends Component {
     }
   };
 
+  renderSets = (categories) => {
+    let sets = [];
+
+    for (let i = 0; i < categories.length; i++) {
+      sets.push(this.renderSkillSet(categories[i].name, categories[i].set));
+    }
+
+    return sets;
+  };
+
   renderSkillSet = (name, collection) => {
-    return <div>
+    return <div key={name + collection.length}>
       <div className="title">{name}</div>
       <div className="skill-list">
         {collection.map((item) => {
@@ -58,10 +68,7 @@ class ResumeSkills extends Component {
   render() {
     return (
       <div className="skills">
-        {this.renderSkillSet('Hard Skills', this.props.data.hardSkills)}
-        {this.renderSkillSet('Soft Skills', this.props.data.softSkills)}
-        {this.renderSkillSet('Languages', this.props.data.languages)}
-        {this.renderSkillSet('Frameworks', this.props.data.frameworks)}
+        {this.renderSets(this.props.data.categories)}
       </div>
     );
   }

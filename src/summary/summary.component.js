@@ -5,7 +5,7 @@ class ResumeSummary extends Component {
   render() {
     return (
       <div className="summary">
-        {this.props.text}
+        {this.props.data}
       </div>
     );
   }

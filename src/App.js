@@ -8,8 +8,6 @@ import ResumeSkills from "./skills/skills.component";
 import ResumePersonalInfo from "./personal-info/personal-info.component";
 import ResumeEducation from "./education/education.component";
 import ResumeAdditionalActivities from "./additional-activies/additional-activities.component";
-import ReactDOMServer from "react-dom/server";
-import * as jsPDF from 'jspdf'
 import axios from 'axios';
 
 class App extends Component {
@@ -23,17 +21,11 @@ class App extends Component {
     };
   }
 
-  componentDidUpdate() {
-    const doc = new jsPDF();
-    doc.fromHTML(ReactDOMServer.renderToStaticMarkup(this.render()));
-    doc.save(`${this.state.name} - Resume.pdf`);
-  }
-
   componentWillMount() {
 
     this.setState({fetching: true});
 
-    this.dataRequest = axios.get(`source.json`)
+    this.dataRequest = axios.get(`data/source.json`)
       .then(res => {
         this.setState({data: res.data, fetching: false});
       }).catch(res => {
@@ -42,7 +34,9 @@ class App extends Component {
   }
 
   componentWillUnmount() {
-    this.dataRequest.abort();
+    if (this.dataRequest) {
+      this.dataRequest.abort();
+    }
   }
 
   render() {
