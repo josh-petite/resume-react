@@ -58,10 +58,10 @@ class ResumeSkills extends Component {
   render() {
     return (
       <div className="skills">
-        {this.renderSkillSet('Hard Skills', this.props.skills.hardSkills)}
-        {this.renderSkillSet('Soft Skills', this.props.skills.softSkills)}
-        {this.renderSkillSet('Languages', this.props.skills.languages)}
-        {this.renderSkillSet('Frameworks', this.props.skills.frameworks)}
+        {this.renderSkillSet('Hard Skills', this.props.data.hardSkills)}
+        {this.renderSkillSet('Soft Skills', this.props.data.softSkills)}
+        {this.renderSkillSet('Languages', this.props.data.languages)}
+        {this.renderSkillSet('Frameworks', this.props.data.frameworks)}
       </div>
     );
   }

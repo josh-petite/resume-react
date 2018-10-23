@@ -18,7 +18,7 @@ class ResumeAdditionalActivities extends Component {
       <div className="activities">
         <h2 className="title">Additional Activities</h2>
         <ul className="items">
-          {this.renderSummaryItems(this.props.activities)}
+          {this.renderSummaryItems(this.props.data)}
         </ul>
       </div>
     );

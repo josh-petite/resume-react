@@ -14,7 +14,7 @@ class ResumeExperience extends Component {
   };
 
   render() {
-    const experience = this.props.exp;
+    const experience = this.props.data;
     const mappedExp = experience.map((e) =>
       <div key={e.title + e.company} className="block">
         <div className="time">

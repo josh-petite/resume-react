@@ -14,7 +14,7 @@ class ResumeEducation extends Component {
   };
 
   render() {
-    const mappedEducation = this.props.edu.map((e) =>
+    const mappedEducation = this.props.data.map((e) =>
       <div key={e.toString()} className="block">
         <div className="time">
           {e.startYear} - {e.endYear ? e.endYear : 'Present'}
