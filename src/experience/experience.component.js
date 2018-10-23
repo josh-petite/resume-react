@@ -7,7 +7,7 @@ class ResumeExperience extends Component {
     let results = [];
 
     for (let i = 0; i < items.length; i++) {
-      results.push(<li>{items[i]}</li>)
+      results.push(<li key={i}>{items[i]}</li>)
     }
 
     return results;
@@ -16,7 +16,7 @@ class ResumeExperience extends Component {
   render() {
     const experience = this.props.exp;
     const mappedExp = experience.map((e) =>
-      <div className="block">
+      <div key={e.title + e.company} className="block">
         <div className="time">
           {e.startYear} - {e.endYear ? e.endYear : 'Present'}
         </div>

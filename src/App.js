@@ -12,7 +12,7 @@ import ReactDOMServer from "react-dom/server";
 import * as jsPDF from 'jspdf'
 
 class App extends Component {
-  componentDidMount() {
+  componentDidUpdate() {
     const doc = new jsPDF();
     doc.fromHTML(ReactDOMServer.renderToStaticMarkup(this.render()));
     doc.save(`${this.data().name} - Resume.pdf`);
@@ -30,7 +30,7 @@ class App extends Component {
         linkedIn: 'https://linkedin.com/something'
       },
       experience: [{
-        company: "Veritas",
+        company: "Mendacium",
         startYear: "2013",
         endYear: null,
         title: "Senior Software Engineer",
@@ -41,7 +41,7 @@ class App extends Component {
         ]
       },
         {
-          company: "Microsoft",
+          company: "Netaker",
           startYear: "2010",
           endYear: "2013",
           title: "Software Engineer",

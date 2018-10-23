@@ -7,16 +7,15 @@ class ResumeEducation extends Component {
     let results = [];
 
     for (let i = 0; i < items.length; i++) {
-      results.push(<li>{items[i]}</li>)
+      results.push(<li key={i}>{items[i]}</li>)
     }
 
     return results;
   };
 
   render() {
-    const education = this.props.edu;
-    const mappedEducation = education.map((e) =>
-      <div className="block">
+    const mappedEducation = this.props.edu.map((e) =>
+      <div key={e.toString()} className="block">
         <div className="time">
           {e.startYear} - {e.endYear ? e.endYear : 'Present'}
         </div>
